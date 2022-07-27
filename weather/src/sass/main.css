@@ -10,6 +10,161 @@ body {
   margin: 20px auto;
 }
 
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-item {
+  border: 2px solid #333;
+}
+
+.globe {
+  color: #172774 !important;
+  font-size: 3rem !important;
+  text-align: center;
+}
+
+.spin {
+  -webkit-animation-name: spinning;
+          animation-name: spinning;
+  -webkit-animation-duration: 5000ms;
+          animation-duration: 5000ms;
+  -webkit-animation-iteration-count: 8s;
+          animation-iteration-count: 8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.spin:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.fa-globe {
+  font-size: 3.5rem;
+  color: #172774;
+}
+
+.logo {
+  margin: 1rem 0 3rem 0;
+  text-align: center;
+}
+
+.weather-logo {
+  color: #3d56b2;
+  text-align: center;
+}
+
+.footer {
+  color: #fff;
+  font-size: 14px;
+  background: #172774;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.icons {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.social {
+  color: #172774;
+  font-size: 2.5rem;
+  margin: 0 10px;
+  text-align: center !important;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+.social:hover {
+  color: #757575;
+}
+
+@-webkit-keyframes spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.bounce-out {
+  -webkit-animation: bounce-out 0s ease 0s;
+          animation: bounce-out 0s ease 0s;
+}
+
+.bounce-out:hover {
+  cursor: pointer;
+  -webkit-animation: bounce-out 2s ease infinite;
+          animation: bounce-out 2s ease infinite;
+}
+
+@-webkit-keyframes bounce-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+}
+
+@keyframes bounce-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+}
+
 .weather {
   width: 300px;
   border-radius: 5px;
@@ -91,6 +246,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   margin-left: 15px;
+  margin-top: 15px;
 }
 
 .daily-item {

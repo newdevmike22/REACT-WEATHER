@@ -3,6 +3,8 @@ import Search from "./comps/search";
 import CurrentWeather from "./comps/current-weather";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./comps/api";
 import Forcast from "./comps/forcast";
+import Carousel from "./comps/carousel";
+import Footer from "./comps/footer";
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -27,14 +29,13 @@ const App = () => {
       });
   }
 
-  console.log(currentWeather);
-  console.log(forecast);
-
   return (
     <div className="container">
+      <Carousel />
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forcast data={forecast} />}
+      <Footer />
     </div>
   )
 }

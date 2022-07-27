@@ -10,3 +10,109 @@ body {
     max-width: 1080px;
     margin: 20px auto;
 }
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-item {
+  border: 2px solid $clr-black;
+}
+
+.globe {
+  color: $clr-blue !important;
+  font-size: 3rem !important;
+  text-align: center;
+}
+
+.spin {
+  animation-name: spinning;
+  animation-duration: 5000ms;
+  animation-iteration-count: 8s;
+  animation-timing-function: linear;
+}
+
+.spin:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: transform 0.5s;
+}
+
+.fa-globe {
+  font-size: 3.5rem;
+  color: $clr-blue;
+}
+
+.logo {
+  margin: 1rem 0 3rem 0;
+  text-align: center;
+}
+
+.weather-logo {
+  color: $clr-blue-two;
+  text-align: center;
+}
+
+.footer {
+  color: $clr-white;
+  font-size: 14px;
+  background: #172774;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+.icons {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.social {
+  color: $clr-blue;
+  font-size: 2.5rem;
+  margin: 0 10px;
+  text-align: center !important;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+.social:hover {
+  color: $clr-med-gray;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bounce-out {
+  animation: bounce-out 0s ease 0s;
+}
+
+.bounce-out:hover {
+  cursor: pointer;
+  animation: bounce-out 2s ease infinite;
+}
+
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
